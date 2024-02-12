@@ -6,6 +6,13 @@ This is a command line project to help study the International Phonetic Alphabet
 
 # Notes on platform and library support
 This has only been tested on a mac and requires that the machine have `afplay` for playing audio. It uses a system call from Python.
+Displaying strings and reading input is done with the curses library to make the experience a bit more game like.
+
+# How to run
+Make sure to `chmod u+x quiz.py` and then you can run with:
+```
+./quiz.py
+```
 
 # How the files were annotated
 The files were downloaded from wikipedia with their original filenames which include their annotations. The IPA symbol for each phoneme was added manually to the filenames for classification purposes.
