@@ -36,10 +36,14 @@ def main(stdscr):
     def refresh():
         stdscr.clear()
         stdscr.refresh()
-        stdscr.addstr(0,0, 'Use <ENTER> to advance. Any other key to repeat.')
+        if vowel_mode:
+            stdscr.addstr(0,0, 'Classify what you hear using backness, height and roundness')
+        else:
+            stdscr.addstr(0,0, 'Classify what you hear by manner and place of articulation')
+        stdscr.addstr(1,0, 'Use <ENTER> to advance and <SPACE> to repeat.')
 
     def display(text):
-        stdscr.addstr(1,0, text)
+        stdscr.addstr(2,0, text)
 
     def mode_prompt():
         display('Which do you want to test?\n1. Vowels\n2. Consonants\n')
