@@ -15,7 +15,7 @@ Make sure to `chmod u+x quiz.py` and then you can run with:
 ```
 
 # How the files were annotated
-The files were downloaded from wikipedia with their original filenames which include their annotations. The IPA symbol for each phoneme was added manually to the filenames for classification purposes.
+The files were downloaded from wikipedia with their original filenames which include their annotations. The IPA symbol for each phoneme was added manually to the filenames for classification purposes. The script that downloaded those files is `ripper.py`. Perhaps it will come in useful in the future.
 
 The filenames are read by the script to display the annotations.
 
