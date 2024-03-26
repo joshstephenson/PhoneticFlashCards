@@ -5,7 +5,7 @@ This is a command line project to help study the International Phonetic Alphabet
 <img width="500" alt="image" src="https://github.com/joshstephenson/PhoneticFlashCards/assets/11002/d118eb37-9d51-4916-a641-fd92c20fad5a">
 
 # Notes on platform and library support
-This has only been tested on a mac and requires that the machine have `afplay` for playing audio. You can install it if you have [homebrew](https://brew.sh/) installed with the command `brew install afplay`. This code uses a system call to `afplay` to play the audio.
+This has only been tested on a mac and requires that the machine have `afplay` for playing audio. You can install it if you have [homebrew](https://brew.sh/) installed with the command `brew install afplay`.
 Displaying strings and reading input is done with the curses library to make the experience a bit more game like.
 
 # How to run
