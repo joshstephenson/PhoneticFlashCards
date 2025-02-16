@@ -48,6 +48,8 @@ def main(stdscr):
     def mode_prompt():
         display('Which do you want to test?\n1. Vowels\n2. Consonants\n')
         select = stdscr.getkey()
+        if select == 'q':
+            exit()
         match int(select):
             case 1:
                 files = get_files(vowels_path)
@@ -55,6 +57,7 @@ def main(stdscr):
                 files = get_files(consonants_path)
             case 3:
                 files = list(vowels.iterdir()) + list(consonants.iterdir())
+
         return select == '1', files
 
     def prompt():
@@ -73,9 +76,15 @@ def main(stdscr):
 
         if prompt():
             display(f'{answer}: {symbol} ')
-            while stdscr.getkey() != '\n':
+            k = 0
+            while k != '\n':
+                if k == 'q':
+                    exit()
                 p.terminate()
                 p = play(file)
+
+                k = stdscr.getkey()
+
             del files[selected]
         p.terminate()
 
